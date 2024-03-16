@@ -72,6 +72,11 @@ public enum ClientAccessor implements ICommonAccessor, IBlockAccessor, IEntityAc
     }
 
     @Override
+    public void blockEntity(BlockEntity blockEntity) {
+        this.blockEntity = blockEntity;
+    }
+
+    @Override
     @SuppressWarnings("unchecked")
     public <T extends Entity> T getEntity() {
         return (T) this.entity;
@@ -99,6 +104,11 @@ public enum ClientAccessor implements ICommonAccessor, IBlockAccessor, IEntityAc
     @Override
     public BlockHitResult getBlockHitResult() {
         return (BlockHitResult) hitResult;
+    }
+
+    @Override
+    public void blockHitResult(BlockHitResult blockHitResult) {
+        this.hitResult = blockHitResult;
     }
 
     @Override

@@ -32,8 +32,10 @@ public interface IBlockAccessor {
     BlockState getBlockState();
 
     @Nullable <T extends BlockEntity> T getBlockEntity();
+    void blockEntity(BlockEntity blockEntity);
 
     BlockHitResult getBlockHitResult();
+    void blockHitResult(BlockHitResult blockHitResult);
 
     BlockPos getPosition();
 
